@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #000207;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.ultron {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(
+        0,
+        220,
+        255,
+        0.045
+      ),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(
+        140,
+        70,
+        255,
+        0.025
+      ),
+      transparent 65%
+    ),
+    #000207;
+}
+
+.ultron canvas {
+  position: absolute !important;
+
+  inset: 0;
+
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ultron-ui {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* =========================================================
+   ULTRON BRAND
+   ========================================================= */
+
+.brand {
+  position: absolute;
+
+  top: 32px;
+  left: 38px;
+
+  color:
+    rgba(
+      220,
+      240,
+      250,
+      0.78
+    );
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.45em;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+  position: absolute;
+
+  bottom: 28px;
+  left: 38px;
+
+  color:
+    rgba(
+      150,
+      190,
+      210,
+      0.32
+    );
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.28em;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   MOTION BUTTON
+   ========================================================= */
+
+.motion-button {
+  position: absolute;
+
+  right: 32px;
+  bottom: 28px;
+
+  padding:
+    11px 16px;
+
+  border:
+    1px solid
+    rgba(
+      0,
+      220,
+      255,
+      0.25
+    );
+
+  background:
+    rgba(
+      0,
+      8,
+      15,
+      0.50
+    );
+
+  color:
+    rgba(
+      200,
+      240,
+      250,
+      0.70
+    );
+
+  font-size: 8px;
+
+  letter-spacing: 0.24em;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(8px);
+
+  pointer-events: auto;
+}
+
+.motion-button:hover {
+  border-color:
+    rgba(
+      0,
+      220,
+      255,
+      0.55
+    );
+
+  background:
+    rgba(
+      0,
+      15,
+      25,
+      0.65
+    );
+}
+
+.motion-button span {
+  display: block;
+
+  margin-top: 7px;
+
+  color:
+    rgba(
+      255,
+      90,
+      110,
+      0.72
+    );
+
+  font-size: 7px;
+}
+
+/* =========================================================
+   MOTION STATUS
+   ========================================================= */
+
+.motion-status {
+  position: absolute;
+
+  right: 32px;
+  bottom: 28px;
+
+  color:
+    rgba(
+      0,
+      220,
+      255,
+      0.50
+    );
+
+  font-size: 8px;
+
+  letter-spacing: 0.24em;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .brand {
+    top: 24px;
+    left: 24px;
+
+    font-size: 11px;
+  }
+
+  .status {
+    bottom: 20px;
+    left: 24px;
+
+    font-size: 7px;
+  }
+
+  .motion-button,
+  .motion-status {
+    right: 24px;
+    bottom: 20px;
+  }
+}
