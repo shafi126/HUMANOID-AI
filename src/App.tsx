@@ -1575,7 +1575,7 @@ function HeartCore({
 }) {
   const gltf = useLoader(
     GLTFLoader,
-    "/models/heart.glb"
+    `${import.meta.env.BASE_URL}models/heart.glb`
   );
 
   const materialRef =
@@ -1902,7 +1902,7 @@ function Scene({
     <>
       <group ref={group}>
         <ParticleModel
-          url="/models/female_head.obj"
+          url={`${import.meta.env.BASE_URL}models/female_head.obj`}
           count={BODY_COUNT}
           type="body"
           input={input}
@@ -1913,7 +1913,7 @@ function Scene({
         />
 
         <ParticleModel
-          url="/models/face2.obj"
+          url={`${import.meta.env.BASE_URL}models/face2.obj`}
           count={HAIR_COUNT}
           type="hair"
           input={input}
@@ -2063,3 +2063,4 @@ export default function App() {
     </div>
   );
 }
+
